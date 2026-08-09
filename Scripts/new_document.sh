@@ -59,9 +59,9 @@ case "$FACH" in
   *)           FACH_SHORT=$(echo "$FACH" | cut -c1-3 | tr '[:lower:]' '[:upper:]') ;;
 esac
 
-# Basis-Pfad & Template-Pfad
-BASE_DIR="$HOME/Documents/School/Subjects/$FACH"
-TEMPLATE_DIR="$HOME/Documents/School/Templates"
+# Basis-Pfad & Template-Pfad (Angepasst auf Developer/School)
+BASE_DIR="$HOME/Developer/School/Subjects/$FACH"
+TEMPLATE_DIR="$HOME/Developer/School/Templates"
 mkdir -p "$BASE_DIR"
 
 # 3. Dokument-Art auswählen

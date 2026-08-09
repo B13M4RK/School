@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd
-cd Documents/School
+cd Developer/School
 git pull
 cd
 

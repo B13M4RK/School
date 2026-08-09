@@ -17,12 +17,12 @@ if [ ! -t 0 ]; then
 fi
 
 # In den Schulordner wechseln (Basis)
-cd ~/Documents/School || exit
+cd ~/Developer/School || exit
 
-# 1. Fächer-Arrays (identisch zu deinem Generator)
+# 1. Fächer-Arrays (Astronomie entfernt, Mathe Vertiefung hinzugefügt)
 FAECHER_DISPLAY=(
   "Kunst"
-  "Astronomie"
+  "Mathe Vertiefung"
   "Gesellschaftskunde"
   "Englisch"
   "Deutsch"
@@ -35,7 +35,7 @@ FAECHER_DISPLAY=(
 
 FAECHER_FOLDER=(
   "Art"
-  "Astronomy"
+  "AdvancedMath"
   "SocialStudies"
   "English"
   "German"

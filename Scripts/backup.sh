@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 1. In den Schulordner wechseln
-cd ~/Documents/School || exit
+cd ~/Developer/School || exit
 
 # 2. Alte PDFs zentral im PDFs-Ordner löschen
 find PDFs/ -type f -name "*.pdf" -delete
