@@ -35,3 +35,5 @@ if ! git diff-index --quiet HEAD -- || [ -n "$(git status --porcelain)" ]; then
     git push origin main 
     notify-send "Git Backup" "Schulordner & PDFs erfolgreich gesichert!" -i document-save 
 fi
+
+
