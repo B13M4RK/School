@@ -28,6 +28,7 @@ FAECHER_DISPLAY=(
   "Sport"
   "Physik"
   "Religion"
+  "Chemie"
 )
 
 FAECHER_FOLDER=(
@@ -41,6 +42,7 @@ FAECHER_FOLDER=(
   "PE"
   "Physics"
   "Religion"
+  "Chemistry"
 )
 
 # 2. Fach auswählen
@@ -83,16 +85,23 @@ esac
 
 # --- LEHRKRAFT ZUWEISEN ---
 case "$FACH" in
-  "Physics")   TEACHER="Lukas Herrwanger" ;;
-  "Math_Core") TEACHER="Cornelia Kessler" ;;
-  *)           TEACHER="LEHRER" ;;
+  "German")        TEACHER="Bonath" ;;
+  "Physics")       TEACHER="Herwanger" ;;
+  "Religion")      TEACHER="Glitsch/Hünnefeld" ;;
+  "Art")           TEACHER="König" ;;
+  "English")       TEACHER="Kaiser" ;;
+  "Chemistry")     TEACHER="Postius" ;;
+  "Math_Core")     TEACHER="Kesser" ;;
+  "Math_Adv")      TEACHER="Bohlken" ;;
+  "SocialStudies") TEACHER="Göller" ;;
+  "History")       TEACHER="Urban" ;;
+  *)               TEACHER="LEHRER" ;;
 esac
 
-# 4. Ordner & Nummerierung ermitteln
+# 4. Zielordner ist direkt das Fach, Nummerierung fortlaufend ermitteln
+ZIELORDNER="$BASE_DIR"
+
 if [ "$ART" == "FOR" ]; then
-  ZIELORDNER="$BASE_DIR/FOR"
-  mkdir -p "$ZIELORDNER"
-  
   read -p "Name für die Formelsammlung: " DOC_NAME
   DOC_NAME_UPPER=$(echo "$DOC_NAME" | tr '[:lower:]' '[:upper:]')
   
@@ -100,48 +109,20 @@ if [ "$ART" == "FOR" ]; then
   DATEINAME="${FACH_SHORT}_FOR_${DOC_NAME}.odt"
 
 else
-  read -p "Kapitel-Nummer eingeben (z. B. 1, 2...): " RAW_CHA_NUM
-  CHA_NUM=$(printf "%02d" "$RAW_CHA_NUM")
-
-  MATCHING_DIR=""
-  for d in "$BASE_DIR"/CHA_${CHA_NUM}*; do
-    if [ -d "$d" ]; then
-      MATCHING_DIR="$d"
-      break
+  # Fortlaufende Nummer für diesen Dokumenttyp im Fach ermitteln
+  MAX_NUM=0
+  while IFS= read -r file; do
+    [ -z "$file" ] && continue
+    filename=$(basename "$file")
+    num=$(echo "$filename" | sed -n "s/^${FACH_SHORT}_${ART}_\([0-9]\+\)_.*$/\1/p")
+    if [[ -n "$num" ]] && (( 10#$num > MAX_NUM )); then
+      MAX_NUM=$((10#$num))
     fi
-  done
+  done < <(find "$ZIELORDNER" -maxdepth 1 -type f -name "${FACH_SHORT}_${ART}_*.odt" 2>/dev/null)
 
-  if [ -n "$MATCHING_DIR" ]; then
-    ZIELORDNER="$MATCHING_DIR"
-    echo "Bestehendes Kapitel gefunden: $(basename "$ZIELORDNER")"
-  else
-    read -p "Neues Kapitel! Kapitel-Name eingeben: " CHA_NAME
-    ZIELORDNER="$BASE_DIR/CHA_${CHA_NUM}_${CHA_NAME}"
-  fi
-
-  mkdir -p "$ZIELORDNER"
-
-  if [ "$ART" == "SUM" ] || [ "$ART" == "EXE" ]; then
-    NUMMER="$CHA_NUM"
-    existing_files=("$ZIELORDNER/${FACH_SHORT}_${ART}_${NUMMER}_"*.odt)
-    if [ -e "${existing_files[0]}" ]; then
-      echo "Hinweis: Es existiert bereits eine ${ART} für dieses Kapitel!"
-    fi
-  else
-    MAX_NUM=0
-    while IFS= read -r file; do
-      [ -z "$file" ] && continue
-      filename=$(basename "$file")
-      num=$(echo "$filename" | sed -n "s/^${FACH_SHORT}_${ART}_\([0-9]\+\)_.*$/\1/p")
-      if [[ -n "$num" ]] && (( 10#$num > MAX_NUM )); then
-        MAX_NUM=$((10#$num))
-      fi
-    done < <(find "$BASE_DIR" -type f -name "${FACH_SHORT}_${ART}_*.odt" 2>/dev/null)
-
-    NEXT_NUM=$((MAX_NUM + 1))
-    NUMMER=$(printf "%02d" "$NEXT_NUM")
-    echo "Gesamte fortlaufende Nummer für $ART in $FACH: $NUMMER"
-  fi
+  NEXT_NUM=$((MAX_NUM + 1))
+  NUMMER=$(printf "%02d" "$NEXT_NUM")
+  echo "Fortlaufende Nummer für $ART in $FACH: $NUMMER"
 
   read -p "Name des Dokuments (z. B. Freier_Fall): " DOC_NAME
   DOC_NAME_UPPER=$(echo "$DOC_NAME" | tr '[:lower:]' '[:upper:]')
