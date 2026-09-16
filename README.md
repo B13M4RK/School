@@ -26,7 +26,7 @@ Das ist mein zentrales Repository für die Oberstufe. Hier findest du alle Notiz
 <summary><b>⚡ Physik</b></summary>
 <br>
 
-* [FOR](./PDFs/PHY_FOR.pdf)
+* [FOR - ](./PDFs/PHY_FOR_.pdf)
 
 </details>
 
