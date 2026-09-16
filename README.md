@@ -26,119 +26,23 @@ Das ist mein zentrales Repository für die Oberstufe. Hier findest du alle Notiz
 <summary><b>⚡ Physik</b></summary>
 <br>
 
-Kapitel 1 - Elektromagnetismus
-
-* [Zusammenfassung](./PDFs/PHY_SUM_01_Elektromagnetismus.pdf)
-* [Aufgaben](./PDFs/PHY_EXE_01.pdf)
-
-Kapitel 2 - Name
-
-* [Zusammenfassung]()
-* [Aufgaben]()
-
-Experimente
-
-* [01 - NAME](./PDFs/PHY_EXP_01_NAME.pdf)
-
-<br>
-
-[📄 Formelsammlung](./PDFs/PHY_FOR.pdf)
-
-</details>
-
-<details>
-<summary><b>📏 Mathematik</b></summary>
-<br>
-
-Kapitel 1 - 
-
-* [Zusammenfassung]()
+* [FOR](./PDFs/PHY_FOR.pdf)
 
 </details>
 
 <details>
 <summary><b>🇬🇧 Englisch</b></summary>
+<br>
 
-Kapitel 1 - Name
-
-* [Zusammenfassung]()
-
-Essays
-
-* [01 - Name]()
+* [ESS - 01 - The - Mars - a - New - Home - For - Mankind](./PDFs/ENG_ESS_01_The_Mars_a_New_Home_For_Mankind.pdf)
 
 </details>
-
-<br>
 
 </details>
 
 <details>
 <summary><b>📖 Grundkurse (GK)</b></summary>
 <br>
-
-<details>
-<summary><b>✍️ Deutsch</b></summary>
-
-Kapitel 1 - Name
-
-* [Zusammenfassung]()
-
-</details>
-
-<details>
-<summary><b>🏛️ Geschichte</b></summary>
-
-Kapitel 1 - Name
-
-* [Zusammenfassung]()
-
-</details>
-
-<details>
-<summary><b>⚖️ Gemeinschaftskunde</b></summary>
-
-Kapitel 1 - Name
-
-* [Zusammenfassung]()
-
-</details>
-
-<details>
-<summary><b>⛪ Religion</b></summary>
-
-Kapitel 1 - Name
-
-* [Zusammenfassung]()
-
-</details>
-
-<details>
-<summary><b>🎨 Kunst</b></summary>
-
-Kapitel 1 - Name
-
-* [Zusammenfassung]()
-
-</details>
-
-<details>
-<summary><b>⚽ Sport</b></summary>
-
-Kapitel 1 - Name
-
-* [Zusammenfassung]()
-
-</details>
-
-<details>
-<summary><b>📐 Mathe Vertiefung</b></summary>
-
-Kapitel 1 - Name
-
-* [Zusammenfassung]()
-
-</details>
 
 </details>
 
@@ -159,7 +63,7 @@ Git Clone (zum Updaten bis AUG 2028)
 
 ```bash
 cd Documents/
-git clone https://github.com/B13M4RK/School.git
+git clone [https://github.com/B13M4RK/School.git](https://github.com/B13M4RK/School.git)
 ```
 
 2. Updating
@@ -172,7 +76,7 @@ git pull
 Download Zip (einmalig)
 ```bash
 cd Downloads
-curl -L -O https://github.com/B13M4RK/SCHOOL/archive/refs/heads/main.zip
+curl -L -O [https://github.com/B13M4RK/SCHOOL/archive/refs/heads/main.zip](https://github.com/B13M4RK/SCHOOL/archive/refs/heads/main.zip)
 unzip main.zip
 rm main.zip
 ```
