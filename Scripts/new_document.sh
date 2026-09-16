@@ -85,16 +85,16 @@ esac
 
 # --- LEHRKRAFT ZUWEISEN ---
 case "$FACH" in
-  "German")        TEACHER="Bonath" ;;
-  "Physics")       TEACHER="Herwanger" ;;
-  "Religion")      TEACHER="Glitsch/Hünnefeld" ;;
-  "Art")           TEACHER="König" ;;
-  "English")       TEACHER="Kaiser" ;;
-  "Chemistry")     TEACHER="Postius" ;;
-  "Math_Core")     TEACHER="Kesser" ;;
-  "Math_Adv")      TEACHER="Bohlken" ;;
-  "SocialStudies") TEACHER="Göller" ;;
-  "History")       TEACHER="Urban" ;;
+  "German")        TEACHER="Ute Bonath" ;;
+  "Physics")       TEACHER="Lukas Herrwanger" ;;
+  "Religion")      TEACHER="Arnold Glitsch-Hünnefeld" ;;
+  "Art")           TEACHER="Lucas König" ;;
+  "English")       TEACHER="Mark Kaiser" ;;
+  "Chemistry")     TEACHER="Sina Postius" ;;
+  "Math_Core")     TEACHER="Cornelia Kessler" ;;
+  "Math_Adv")      TEACHER="Johanna Bohlken" ;;
+  "SocialStudies") TEACHER="Nikolaus Göller" ;;
+  "History")       TEACHER="Tobias Urban" ;;
   *)               TEACHER="LEHRER" ;;
 esac
 
