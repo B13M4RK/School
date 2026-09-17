@@ -44,6 +44,14 @@ Das ist mein zentrales Repository für die Oberstufe. Hier findest du alle Notiz
 <summary><b>📖 Grundkurse (GK)</b></summary>
 <br>
 
+<details>
+<summary><b>🎨 Kunst</b></summary>
+<br>
+
+* [PRE - 01 - Futurismus](./PDFs/ART_PRE_01_Futurismus.pdf)
+
+</details>
+
 </details>
 
 ---
