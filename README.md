@@ -52,6 +52,26 @@ Das ist mein zentrales Repository für die Oberstufe. Hier findest du alle Notiz
 
 </details>
 
+<details>
+<summary><b>📖 Fach (TEM)</b></summary>
+<br>
+
+* [ESS](./PDFs/TEM_ESS.pdf)
+* [EXE](./PDFs/TEM_EXE.pdf)
+* [EXP](./PDFs/TEM_EXP.pdf)
+* [FOR](./PDFs/TEM_FOR.pdf)
+* [SUM](./PDFs/TEM_SUM.pdf)
+
+</details>
+
+<details>
+<summary><b>🧪 Chemie</b></summary>
+<br>
+
+* [SUM - 01 - Naturstoffe](./PDFs/CHE_SUM_01_Naturstoffe.pdf)
+
+</details>
+
 </details>
 
 ---

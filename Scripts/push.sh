@@ -34,6 +34,7 @@ import glob
 PDF_DIR = "PDFs"
 README_PATH = "README.md"
 
+# Bekannte Fächer mit festem Display-Namen und Tier
 SUBJECTS = {
     "PHY": ("⚡ Physik", "LK"),
     "MAA": ("📏 Mathematik", "LK"),
@@ -46,6 +47,7 @@ SUBJECTS = {
     "ART": ("🎨 Kunst", "GK"),
     "SPO": ("⚽ Sport", "GK"),
     "MAT": ("📐 Mathe Vertiefung", "GK"),
+    "CHE": ("🧪 Chemie", "GK"),
 }
 
 def scan_pdfs():
@@ -64,9 +66,14 @@ def scan_pdfs():
         
         if prefix in SUBJECTS:
             subj_name, tier = SUBJECTS[prefix]
-            if subj_name not in categorized[tier]:
-                categorized[tier][subj_name] = []
-            categorized[tier][subj_name].append(filename)
+        else:
+            # Fallback für komplett neue/unbekannte Fächer (Standardmäßig als Grundkurs GK)
+            subj_name = f"📖 Fach ({prefix})" if prefix else "📖 Sonstige"
+            tier = "GK"
+
+        if subj_name not in categorized[tier]:
+            categorized[tier][subj_name] = []
+        categorized[tier][subj_name].append(filename)
             
     return categorized
 
@@ -83,9 +90,11 @@ def generate_markdown(categorized):
     md.append('Das ist mein zentrales Repository für die Oberstufe. Hier findest du alle Notizen, Materialien und Kapitel zu den einzelnen Kursen:\n\n')
 
     for tier_key, tier_title in [("LK", "🔥 Leistungskurse (LK)"), ("GK", "📖 Grundkurse (GK)")]:
+        subjects = categorized.get(tier_key, {})
+        if not subjects:
+            continue
         md.append(f'<details>\n<summary><b>{tier_title}</b></summary>\n<br>\n\n')
         
-        subjects = categorized.get(tier_key, {})
         for subj_name, pdf_list in sorted(subjects.items()):
             md.append(f'<details>\n<summary><b>{subj_name}</b></summary>\n<br>\n\n')
             
