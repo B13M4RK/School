@@ -45,6 +45,14 @@ Das ist mein zentrales Repository für die Oberstufe. Hier findest du alle Notiz
 <br>
 
 <details>
+<summary><b>✍️ Deutsch</b></summary>
+<br>
+
+* [ESS - 01 - Innerer - Monolog - Paul](./PDFs/GER_ESS_01_Innerer_Monolog_Paul.pdf)
+
+</details>
+
+<details>
 <summary><b>🎨 Kunst</b></summary>
 <br>
 
