@@ -76,6 +76,7 @@ Das ist mein zentrales Repository für die Oberstufe. Hier findest du alle Notiz
 <summary><b>🧪 Chemie</b></summary>
 <br>
 
+* [EXP - 01 - Alkangruppennachweis](./PDFs/CHE_EXP_01_Alkangruppennachweis.pdf)
 * [SUM - 01 - Naturstoffe](./PDFs/CHE_SUM_01_Naturstoffe.pdf)
 
 </details>
