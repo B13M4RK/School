@@ -35,6 +35,7 @@ Das ist mein zentrales Repository für die Oberstufe. Hier findest du alle Notiz
 <br>
 
 * [ESS - 01 - The - Mars - a - New - Home - For - Mankind](./PDFs/ENG_ESS_01_The_Mars_a_New_Home_For_Mankind.pdf)
+* [ESS - 02 - CartoonAnalysisAndrewsMcNeel](./PDFs/ENG_ESS_02_CartoonAnalysisAndrewsMcNeel.pdf)
 
 </details>
 
@@ -77,6 +78,7 @@ Das ist mein zentrales Repository für die Oberstufe. Hier findest du alle Notiz
 <br>
 
 * [EXP - 01 - Alkangruppennachweis](./PDFs/CHE_EXP_01_Alkangruppennachweis.pdf)
+* [EXP - 02 - Fehling - Probe](./PDFs/CHE_EXP_02_Fehling_Probe.pdf)
 * [SUM - 01 - Naturstoffe](./PDFs/CHE_SUM_01_Naturstoffe.pdf)
 
 </details>
