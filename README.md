@@ -78,6 +78,7 @@ Das ist mein zentrales Repository für die Oberstufe. Hier findest du alle Notiz
 <br>
 
 * [EXP - 01 - Fehling - Probe](./PDFs/CHE_EXP_01_Fehling_Probe.pdf)
+* [EXP - 02 - Tollensprobe](./PDFs/CHE_EXP_02_Tollensprobe.pdf)
 * [SUM - 01 - Naturstoffe](./PDFs/CHE_SUM_01_Naturstoffe.pdf)
 
 </details>
